@@ -102,7 +102,7 @@ public class Loader
         //методом
         Cat cat11 = null;
         try {
-            cat11 = (Cat)cat9.clone();
+            cat11 = cat9.clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }

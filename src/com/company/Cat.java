@@ -144,11 +144,9 @@ public class Cat implements Cloneable
     }
     //Урок №7
     // создадим метод для "копирования" кошки,
-    // переопределив метод clone()
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public Cat clone() throws CloneNotSupportedException{
+        Cat newCat = (Cat) super.clone();
+        return newCat;
     }
 
     //а также конструктор для копирования кошки
