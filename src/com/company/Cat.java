@@ -83,7 +83,7 @@ public class Cat implements Cloneable
         else weight = weight + amount;
     }
 
-    public Double getWeight()
+    public double getWeight()
     {
         return weight;
     }
@@ -145,13 +145,22 @@ public class Cat implements Cloneable
     //Урок №7
     // создадим метод для "копирования" кошки,
     public Cat clone() throws CloneNotSupportedException{
-        Cat newCat = (Cat) super.clone();
-        return newCat;
+        return (Cat)super.clone();
+    }
+
+    public double getMinWeight() {
+        return minWeight;
+    }
+
+    public double getMaxWeight() {
+        return maxWeight;
     }
 
     //а также конструктор для копирования кошки
     public Cat(Cat cat)
     {
-       this(cat.originWeight,cat.getWeight(),MIN_WEIGHT,MAX_WEIGHT,cat.getColorOfTheCat());
+       this(cat.getOriginWeight(),cat.getWeight(),
+               cat.getMinWeight(),cat.getMaxWeight(),
+               cat.getColorOfTheCat());
     }
 }
